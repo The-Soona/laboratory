@@ -9,6 +9,8 @@ class StrontiumResolverPlugin {
     const target = resolver.ensureHook(this.target);
     resolver.getHook(this.source).tapAsync('StrontiumResolver', (request, context, callback) => {
       console.log('--> StrontiumResolver', request, context, callback);
+      // DO NOTHING, JUST PRINT OUT
+      callback();
     });
 	}
 }
